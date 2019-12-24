@@ -5,19 +5,21 @@
 <p align="center">
     <img src="https://img.shields.io/cocoapods/dt/ChameleonFramework.svg?maxAge=86400" alt="Downloads"/>  
     <img src="https://img.shields.io/cocoapods/at/ChameleonFramework.svg?maxAge=86400" alt="Apps"/>
-    <img src="https://img.shields.io/badge/platform-iOS%208%2B-blue.svg?style=flat" alt="Platform: iOS 8+"/>
-    <a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/language-swift%203-4BC51D.svg?style=flat" alt="Language: Swift 3" /></a>
+    <img src="https://img.shields.io/badge/platform-iOS%2010%2B-blue.svg?style=flat" alt="Platform: iOS 10+"/>
+    <a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/language-swift%205-4BC51D.svg?style=flat" alt="Language: Swift 5" /></a>
     <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible" /></a>
     <a href="https://cocoapods.org/pods/ChameleonFramework"><img src="https://cocoapod-badges.herokuapp.com/v/ChameleonFramework/badge.png" alt="CocoaPods compatible" /></a>
     <img src="http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat" alt="License: MIT" /> <br><br>
 </p>
 
-## Swift 3
+## Swift 5
 
-To use the Swift 3 version, add this to your Podfile (until 2.2 or higher is released):
+To use the Swift 5 version, add this to your Podfile (until 2.2 or higher is released):
 ```ruby
-pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
+pod 'ChameleonFramework/Swift', :git => 'https://github.com/alokc83/Chameleon.git', :branch => "Swift5"
 ```
+<p>
+**I am still working on documentation. If it ain't says swift 5. It's not updated yet.**
 
 ## Introduction
 
@@ -133,8 +135,8 @@ If you're like us and love to use storyboards, Chameleon's got you covered. We'v
 ## ⚠️ Requirements
 
 * Objective-C or Swift
-* Requires a minimum of iOS 7.0 for Objective-C (No active development for anything earlier, but may work with 6.0) and a minimum of iOS 8.0 for Swift.
-* Requires Xcode 6.3 for use in any iOS Project
+* Requires a minimum of iOS 10.0 for Objective-C (No active development for anything earlier, but may work with 8.0) and a minimum of iOS 10.0 for Swift.
+* Requires Xcode 11.2 for use in any iOS Project
 
 ## 🔑 License
 Chameleon is released and distributed under the terms and conditions of the [MIT license](https://github.com/ViccAlexander/Chameleon/blob/master/LICENSE.md).
@@ -142,7 +144,7 @@ Chameleon is released and distributed under the terms and conditions of the [MIT
 ## 👥 Contributions
 If you run into problems, please open up an issue. We also actively welcome pull requests. By contributing to Chameleon you agree that your contributions will be licensed under its MIT license.
 
-If you use Chameleon in your app we would love to hear about it! Drop Vicc a line on [twitter](http://twitter.com/viccsmind).
+If you use Chameleon in your app we would love to hear about it! Drop Vicc [twitter](http://twitter.com/viccsmind) and Alok [twitter](http://twitter.com/alokc83) a line on .
 
 ## 📗 Documentation
 All methods, properties, and types available in Chameleon are documented below.   
@@ -181,7 +183,7 @@ pod 'ChameleonFramework/Swift'
 #### Carthage Installation
 Add this to your Cartfile:
 ```ruby
-github "ViccAlexander/Chameleon"
+github "alokc83/Chameleon"
 ```
 
 =======
@@ -195,7 +197,7 @@ If you rather install this framework manually, just drag and drop the Chameleon 
 If you're working with Swift and are manually installing Chameleon, there's an additional step. Make sure to download and drag the following file, [ChameleonShorthand.swift](https://github.com/ViccAlexander/Chameleon/blob/master/Pod/Classes/Swift/ChameleonShorthand.swift), into your project, and you'll be good to go.
 
 #### Palettes
-##### Storyboard Add-On
+##### Storyboard Add-On 
 Using Chameleon's awesome palette in Storyboard is easy! Simply download and install [Chameleon Palette](https://github.com/ViccAlexander/Chameleon/blob/master/Extras/Chameleon.dmg?raw=true).
 
 Once installed, make sure to restart Xcode. You'll find all of Chameleon's colors in the Palette Color Picker whenever they're needed! :)
@@ -259,9 +261,9 @@ Using a flat color is as easy as adding any other color in your app (if not easi
 ``` objective-c
 self.view.backgroundColor = [UIColor flatGreenColorDark];
 ```
-###### Swift
+###### Swift 5
 ``` swift
-view.backgroundColor = UIColor.flatGreenDark
+view.backgroundColor = UIColor.flatGreenDark()
 ```
 
 ##### Chameleon Shorthand:
@@ -269,10 +271,10 @@ view.backgroundColor = UIColor.flatGreenDark
 ###### Objective-C
 ``` objective-c
 self.view.backgroundColor = FlatGreenDark;
-```
-###### Swift
+``` 
+###### Swift 5
 ``` swift
-view.backgroundColor = FlatGreenDark()
+view.backgroundColor = .flatGreenDark()
 ```
 
 Setting the color for a light shade is the same, except without adding the *Dark* suffix. (By default, all colors without a *Dark* suffix are light shades). For example:
@@ -282,9 +284,9 @@ Setting the color for a light shade is the same, except without adding the *Dark
 ``` objective-c
 self.view.backgroundColor = [UIColor flatGreenColor];
 ```
-###### Swift
+###### Swift 5
 ``` swift
-view.backgroundColor = UIColor.flatGreen
+view.backgroundColor = UIColor.flatGreen()
 ```
 
 ##### Chameleon Shorthand:
@@ -293,9 +295,9 @@ view.backgroundColor = UIColor.flatGreen
 ``` objective-c
 self.view.backgroundColor = FlatGreen;
 ```
-###### Swift
+###### Swift 5
 ``` swift
-view.backgroundColor = FlatGreen()
+view.backgroundColor = .flatGreen()
 ```
 
 #### Random Colors
@@ -306,9 +308,9 @@ There are four ways to generate a random flat color. If you have no preference a
 ``` objective-c
 self.view.backgroundColor = [UIColor randomFlatColor];
 ```
-###### Swift
+###### Swift 5
 ``` swift
-view.backgroundColor = UIColor.randomFlat
+view.backgroundColor = UIColor.randomFlat()
 ```
 
 ##### Chameleon Shorthand:
@@ -317,9 +319,9 @@ view.backgroundColor = UIColor.randomFlat
 self.view.backgroundColor = RandomFlatColor;
 ```
 
-###### Swift
+###### Swift 5
 ``` swift
-view.backgroundColor = RandomFlatColor()
+view.backgroundColor = .randomFlat()
 ```
 
 Otherwise, you can perform the following method call to specify whether it should return either a light or dark shade:
@@ -330,9 +332,9 @@ Otherwise, you can perform the following method call to specify whether it shoul
 [UIColor colorWithRandomFlatColorOfShadeStyle:UIShadeStyleLight];
 ```
 
-###### Swift
+###### Swift 5
 ``` swift
-UIColor(randomFlatColorOfShadeStyle:.Light)
+UIColor.init(randomFlatColorOf:.light)
 ```
 
 ##### Chameleon Shorthand:
@@ -340,14 +342,14 @@ UIColor(randomFlatColorOfShadeStyle:.Light)
 ``` objective-c
 RandomFlatColorWithShade(UIShadeStyleLight);
 ```
-###### Swift
+###### Swift 5
 ``` swift
-RandomFlatColorWithShade(.Light)
+.init(randomFlatColorOf:.light)
 ```
 
 **UIShadeStyles:**  
-- `UIShadeStyleLight` (`UIShadeStyle.Light` in Swift)
-- `UIShadeStyleDark` (`UIShadeStyle.Dark` in Swift)
+- `UIShadeStyleLight` (`UIShadeStyle.light` in Swift)
+- `UIShadeStyleDark` (`UIShadeStyle.dark` in Swift)
 
 ##### Choosing A Random Color From a List of Colors ![New](http://i.imgur.com/BX3b9ES.png)
 
@@ -359,7 +361,7 @@ If you need to be a bit more selective and only display a random color from a se
 [UIColor colorWithRandomColorInArray:@[FlatWhite, FlatRed, FlatBlue]];
 ```
 
-###### Swift
+###### Swift 5
 ``` swift
 TBA
 ```
@@ -369,7 +371,7 @@ TBA
 ``` objective-c
 RandomFlatColorInArray(@[FlatWhite, FlatRed, FlatBlue]) 
 ```
-###### Swift
+###### Swift 5
 ``` swift
 TBA
 ```
@@ -384,7 +386,7 @@ Last but certainly not least, you can also choose form the list of random colors
 [UIColor colorWithRandomFlatColorExcludingColorsInArray:@[FlatBlack, FlatBlackDark, FlatGray, FlatGrayDark, FlatWhite, FlatWhiteDark]];
 ```
 
-###### Swift
+###### Swift 5
 ``` swift
 TBA
 ```
@@ -394,7 +396,7 @@ TBA
 ``` objective-c
 RandomFlatColorExcluding(@[FlatBlack, FlatBlackDark, FlatGray, FlatGrayDark, FlatWhite, FlatWhiteDark]) 
 ```
-###### Swift
+###### Swift 5
 ``` swift
 TBA
 ```
@@ -408,9 +410,9 @@ To generate a complementary color, perform the following method call, rememberin
 [UIColor colorWithComplementaryFlatColorOf:(UIColor *)someUIColor];
 ```
 
-###### Swift
+###### Swift 5
 ``` swift
-UIColor(complementaryFlatColorOf:someUIColor)
+UIColor.init(complementaryFlatColorOf:someUIColor)
 ```
 
 ##### Chameleon Shorthand:
@@ -419,9 +421,9 @@ UIColor(complementaryFlatColorOf:someUIColor)
 ComplementaryFlatColorOf(color);
 ```
 
-###### Swift
+###### Swift 5
 ``` swift
-ComplementaryFlatColorOf(color)
+.init(complementaryFlatColorOf:color)
 ```
 
 #### Contrasting Colors
@@ -437,9 +439,9 @@ Here's an example:
 [UIColor colorWithContrastingBlackOrWhiteColorOn:(UIColor *)backgroundColor isFlat:(BOOL)flat];
 ```
 
-###### Swift
+###### Swift 5
 ``` swift
-UIColor(contrastingBlackOrWhiteColorOn:UIColor!, isFlat:Bool)
+UIColor.init(contrastingBlackOrWhiteColorOn:UIColor!, isFlat:Bool)
 ```
 
 ##### Chameleon Shorthand:
@@ -448,9 +450,9 @@ UIColor(contrastingBlackOrWhiteColorOn:UIColor!, isFlat:Bool)
 ContrastColor(backgroundColor, isFlat);
 ```
 
-###### Swift
+###### Swift 5
 ``` swift
-ContrastColor(backgroundColor, isFlat)
+None
 ```
 
 #### Flattening Non-Flat Colors
@@ -462,7 +464,7 @@ As mentioned previously, this feature is unique to Chameleon. While this feature
 [(UIColor *)color flatten];
 ```
 
-###### Swift
+###### Swift 5
 ``` swift
 UIColor.pink.flatten()
 ```
@@ -514,9 +516,9 @@ One of the most requested features, *hex colors*, is now available. You can simp
 [UIColor colorWithHexString:(NSString *)string];
 ```
 
-###### Swift
+###### Swift 5
 ``` swift
-UIColor(hexString:string)
+UIColor.init(hexString:string)
 ```
 
 ##### Chameleon Shorthand:
@@ -525,9 +527,9 @@ UIColor(hexString:string)
 HexColor(hexString)
 ```
 
-###### Swift
+###### Swift 5
 ``` swift
-HexColor(hexString)
+.init(hexString: hexString)
 ```
 #### Hex Values ![New](http://i.imgur.com/BX3b9ES.png)
 
@@ -540,7 +542,7 @@ Retrieving the `hexValue` of a UIColor is just as easy.
 
 ###### Swift
 ``` swift
-FlatGreen.hexValue //Returns @"2ecc71"
+UIColor.flatGreen().hexValue() //Returns @"2ecc71"
 ```
 
 #### Lighter and Darker Colors
@@ -553,9 +555,9 @@ Sometimes all you need is a color a shade lighter or a shade darker. Well for th
 [color lightenByPercentage:(CGFloat)percentage];
 ```
 
-###### Swift
+###### Swift 5
 ``` swift
-color.lightenByPercentage(percentage: CGFloat)
+color.lighten(byPercentage: CGFloat)
 ```
 
 You can also generate a darker version of a color:
@@ -568,7 +570,7 @@ You can also generate a darker version of a color:
 
 ###### Swift
 ``` swift
-color.darkenByPercentage(percentage: CGFloat)
+color.darken(byPercentage: CGFloat)
 ```
 
 ### Colors From Images
@@ -780,6 +782,8 @@ Chameleon was developed by **Vicc Alexander** [(@ViccsMind)](https://twitter.com
 * ~~Add support for App Extensions hairline~~ ![2.2.0](http://i.imgur.com/z6575IT.png)
 * Add Swift Support for Random Colors
 * Allow Gradient Colors to Adapt To Frame Changes
+* Close all `To Be Added` items 
+* 
 
 ## 📄 Change Log
 
